@@ -1,0 +1,19 @@
+{
+    "name": "Digital Clock App",
+    "description": "A simple digital clock with monokai pro theme",
+    "short_name": "Digital Clock",
+    "start_url" : "/",
+    "icons": [
+      {
+        "src": "images/clock-32.png",
+        "sizes": "32x32"
+      },
+      {
+        "src": "images/clock.png",
+        "sizes": "512x512"
+      }
+    ],
+    "display": "fullscreen",
+    "orientation": "landscape-primary",
+    "theme_color": "#2c292d"
+  }

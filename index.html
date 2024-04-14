@@ -1,19 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Digital Clock</title>
-</head>
-<body>
+    <link rel="icon" type="image/png" href="images/clock.png" />
+    <link rel="manifest" href="manifest.json" />
+  </head>
+  <body>
     <div class="wrapper">
-        <div class="clock">
-            <h1 id="time"></h1>
-        </div>
-        <div class="info">Developed with ♥️ by <a href="https://github.com/MateusCosta" target="_blank">Mateus Costa</a></div>
+      <div class="clock">
+        <h1 id="time"></h1>
+      </div>
+      <div class="info">
+        Developed with ♥️ by
+        <a href="https://github.com/MateusCosta" target="_blank">Mateus Costa</a>
+      </div>
+      <div class="info">
+        <a href="https://www.flaticon.com/free-icons/clock" title="clock icons">Clock icons created by justicon - Flaticon</a>
+      </div>
     </div>
     <script src="script/clock.js" defer></script>
-</body>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js").then(
+          (registration) => {
+            console.log(
+              "Service worker registration successful:",
+              registration
+            );
+          },
+          (error) => {
+            console.error(`Service worker registration failed: ${error}`);
+          }
+        );
+      } else {
+        console.error("Service workers are not supported.");
+      }
+    </script>
+  </body>
 </html>
