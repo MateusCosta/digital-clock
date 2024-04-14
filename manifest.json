@@ -2,7 +2,7 @@
     "name": "Digital Clock App",
     "description": "A simple digital clock with monokai pro theme",
     "short_name": "Digital Clock",
-    "start_url" : "/",
+    "start_url" : "/digital-clock/",
     "icons": [
       {
         "src": "images/clock-32.png",
